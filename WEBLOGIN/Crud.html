@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Web App</title>
+    <script src="data.js"></script>
+    <style>
+        /* Style sederhana untuk tampilan */
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .button { background-color: #008CBA; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar Tugas</h2>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Tambahkan tugas baru..." required>
+            <button type="button" id="addTask" class="button" onclick="addTask()">Tambah</button>
+        </form>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tugas</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+        </table>
+    </div>
+</body>
+</html>
